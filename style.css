@@ -54,6 +54,11 @@ h1, h2 {
 
 #button {
     height: 10vh;
+    transition: transform 70ms linear;
+}
+
+#button.pop {
+    transform: scale(1.2);
 }
 
 #button svg {
