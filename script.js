@@ -19,14 +19,30 @@ window.addEventListener("load", () => {
         autoplay: false,
         path: 'assets/egg-lottie.json'
     });
+    addEventListeners();
+});
+
+const addEventListeners = () => {
     svgGroup.addEventListener("click", handleClick);
     svgGroup.addEventListener("mousedown", popButton);
     svgGroup.addEventListener("touchstart", popButton);
     svgGroup.addEventListener("mouseup", unPopButton);
     svgGroup.addEventListener("mouseleave", unPopButton);
     svgGroup.addEventListener("touchend", unPopButton);
+    svgGroup.addEventListener("touchmove", unPopButton);
     svgGroup.addEventListener("touchcancel", unPopButton);
-});
+}
+
+const removeEventListeners = () => {
+    svgGroup.removeEventListener("click", handleClick);
+    svgGroup.removeEventListener("mousedown", popButton);
+    svgGroup.removeEventListener("touchstart", popButton);
+    svgGroup.removeEventListener("mouseup", unPopButton);
+    svgGroup.removeEventListener("mouseleave", unPopButton);
+    svgGroup.removeEventListener("touchend", unPopButton);
+    svgGroup.removeEventListener("touchmove", unPopButton);
+    svgGroup.removeEventListener("touchcancel", unPopButton);
+}
 
 const popButton = () => {
     document.getElementById("button").classList.add("pop");
@@ -40,7 +56,7 @@ const handleClick = () => {
     countClicks++;
     document.getElementById("days").innerText = countClicks;
     if (countClicks === clickTarget) {
-        svgGroup.removeEventListener("click", handleClick);
+        removeEventListeners();
         animation.goToAndPlay(animationKeyFrames[clicksMilestones.indexOf(clickTarget)], true);
     } else if (clicksMilestones.includes(countClicks)) {
         animation.goToAndStop(animationKeyFrames[clicksMilestones.indexOf(countClicks)], true);
