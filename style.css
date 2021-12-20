@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(30 30 30);
+    user-select: none;
+}
+
+.middle-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rebeccapurple;
+    width: 2px;
+    top: 0;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 5vh 0 8vh 0;
+    box-sizing: border-box;
+}
+
+#lottie-container {
+    padding-right: 11px;
+    box-sizing: border-box;
+}
+
+#lottie-container svg {
+    max-height: 50vh;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ed5168;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+#days {
+    font-size: 90px;
+}
+
+#button {
+    height: 10vh;
+}
+
+#button svg {
+    height: 100%;
+}
+
+#heart {
+    transform-origin: center;
+    cursor: pointer;
+}
