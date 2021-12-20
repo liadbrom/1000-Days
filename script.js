@@ -10,7 +10,7 @@ const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 const clickTarget = diffDays;
 const clicksMilestones = animationKeyFrames.map(k => Math.round((k / animationKeyFrames[animationKeyFrames.length - 1]) * clickTarget));
 window.addEventListener("load", () => {
-    document.getElementById("title").innerText = `${diffDays} Days`;
+    document.getElementById("title").innerText = `${diffDays} Days With Nugget`;
     svgGroup = document.getElementById("svg-group");
     animation = lottie.loadAnimation({
         container: document.getElementById("lottie-container"),
