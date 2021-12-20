@@ -20,16 +20,6 @@ window.addEventListener("load", () => {
         path: 'assets/egg-lottie.json'
     });
     svgGroup.addEventListener("click", handleClick);
-    // buttonAnimation = button.animate(
-    //     [
-    //         { transform: 'scale(1)' },
-    //         { transform: 'scale(1.1)' },
-    //         { transform: 'scale(1)' }
-    //     ], {
-    //     duration: 200,
-    //     easing: "ease-out"
-    // });
-    // buttonAnimation.pause();
     svgGroup.addEventListener("mousedown", popButton);
     svgGroup.addEventListener("touchstart", popButton);
     svgGroup.addEventListener("mouseup", unPopButton);
@@ -47,7 +37,6 @@ const unPopButton = () => {
 }
 
 const handleClick = () => {
-    // buttonAnimation.play();
     countClicks++;
     document.getElementById("days").innerText = countClicks;
     if (countClicks === clickTarget) {
