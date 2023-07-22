@@ -5,4 +5,4 @@ The number of days is counted from a fixed date (originally made for celebrating
 Utilizes [Lottie](https://lottiefiles.com).
 
 ## Live Site  
-[1000-Days](https://liadbr2.github.io/1000-Days/)
+[1000-Days](https://liadbrom.github.io/1000-Days/)
